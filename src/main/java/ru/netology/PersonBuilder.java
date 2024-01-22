@@ -3,7 +3,7 @@ package ru.netology;
 public class PersonBuilder  {
 
         public String name;
-        public  String surname;
+        public String surname;
         public int age;
         public String address;
 
@@ -17,7 +17,9 @@ public class PersonBuilder  {
             return this;
         }
         public PersonBuilder setAge(int age) {
-
+            if (age < 0) {
+                throw new IllegalStateException("Возраст не может быть отрицательным");
+            }
                 this.age = age;
                 return this;
         }
@@ -27,11 +29,9 @@ public class PersonBuilder  {
             return this;
         }
 
-        public Person build() throws Exception {
+        public Person build() {
                 if (name == null || surname == null) {
-                    throw new Exception("Не задана name или surname");
-                } else if (age < 0) {
-                    throw new Exception("Возраст не может быть отрицательным");
+                    throw new IllegalStateException("Не задана name или surname");
                 } else {
                     Person person = new Person(name, surname, age);
                     person.setAddress(address);

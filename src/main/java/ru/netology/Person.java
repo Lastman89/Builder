@@ -71,7 +71,7 @@ public class Person {
     @Override
     public String toString() {
         return
-                " " + getName() +
+                getName() +
                 " " + getSurname() +
                 " в возрасте: " + getAge().getAsInt() +
                 " живущий в городе: " + getAddress() + "\n";
@@ -81,6 +81,4 @@ public class Person {
     public int hashCode() {
         return Objects.hash(name, surname);
     }
-
-
 }
