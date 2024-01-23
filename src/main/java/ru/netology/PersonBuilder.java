@@ -20,7 +20,7 @@ public class PersonBuilder {
 
     public PersonBuilder setAge(int age) {
         if (age < 0) {
-            throw new IllegalStateException("Возраст не может быть отрицательным");
+            throw new IllegalArgumentException("Возраст не может быть отрицательным");
         }
         this.age = age;
         return this;
