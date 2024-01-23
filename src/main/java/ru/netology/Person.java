@@ -72,9 +72,9 @@ public class Person {
     public String toString() {
         return
                 getName() +
-                " " + getSurname() +
-                " в возрасте: " + getAge().getAsInt() +
-                " живущий в городе: " + getAddress() + "\n";
+                        " " + getSurname() +
+                        " в возрасте: " + getAge().getAsInt() +
+                        " живущий в городе: " + getAddress() + "\n";
     }
 
     @Override
